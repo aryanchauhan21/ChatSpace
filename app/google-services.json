@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "287894560718",
+    "firebase_url": "https://chatspace-a518a.firebaseio.com",
+    "project_id": "chatspace-a518a",
+    "storage_bucket": "chatspace-a518a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287894560718:android:fd2fe7d1de0a4e6eb2d59f",
+        "android_client_info": {
+          "package_name": "com.leotarius.chatspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287894560718-ooh689krh7q8uiv8v22aec891d6bj0st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg-A-OtS-q7cLjqCS9PdwTpZznX-vpNio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287894560718-ooh689krh7q8uiv8v22aec891d6bj0st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

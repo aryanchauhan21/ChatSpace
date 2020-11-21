@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ChatSpace</string>
+
+    <string name="email_invalid_error">Email address invalid</string>
+    <string name="password_invalid_error">Password length cannot be less than 8 characters</string>
+    <string name="name_invalid_error">Name field cannot be blank</string>
 </resources>
