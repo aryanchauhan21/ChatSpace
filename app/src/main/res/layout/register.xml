@@ -43,17 +43,40 @@
         app:layout_constraintTop_toBottomOf="@id/toolbarLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLayout"
+        android:id="@+id/usernameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="150dp"
-        android:hint="Email"
+        android:hint="Username"
         android:textColorHint="@color/hintColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
@@ -87,10 +110,10 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="login"
+        android:text="Register"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,38 +125,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/error"
-        android:text="Wrong Email, please enter a valid email."
+        android:text="Wrong details."
         android:textColor="@color/red"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/login"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Don't have an account ?"
-        android:textSize="15sp"
-        android:textColor="@color/primaryText"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Register"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

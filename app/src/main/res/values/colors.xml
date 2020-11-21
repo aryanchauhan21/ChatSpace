@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#563473</color>
-    <color name="colorPrimaryDark">#2f3640</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimary">#f5f6fa</color>
+    <color name="colorPrimaryDark">#50306C</color>
+    <color name="colorAccent">#563473</color>
     <color name="hintColor">#f8f8ff</color>
     <color name="primaryText">#FFFFFF</color>
     <color name="ripple_primary">#ffffff</color>
@@ -17,4 +17,5 @@
     <color name="light_greenish_blue">#55efc4</color>
     <color name="light_blue">#81ecec</color>
     <color name="dark_yello">#f9ca24</color>
+    <color name="dark_accent">#50306C</color>
 </resources>
