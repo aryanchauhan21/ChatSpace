@@ -23,7 +23,7 @@
             app:contentInsetRight="0dp"
             app:contentInsetStart="0dp">
 
-            <include layout="@layout/app_toolbar" />
+            <include layout="@layout/app_toolbar2" />
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
