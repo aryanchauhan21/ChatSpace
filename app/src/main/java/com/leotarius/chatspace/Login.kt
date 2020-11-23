@@ -18,6 +18,8 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        auth = FirebaseAuth.getInstance()
+
         register.setOnClickListener {
             startActivity(Intent(this, Register::class.java))
         }
