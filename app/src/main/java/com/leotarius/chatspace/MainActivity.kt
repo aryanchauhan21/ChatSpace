@@ -67,13 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val layoutManager = LinearLayoutManager(this)
-        val mList = ArrayList<Message>()
-        mList.add(Message("1","Hey man", "Aryan Bharadwaj"))
-        mList.add(Message(user?.uid,"Hey mate", "Aryan Chauhan"))
-        mList.add(Message("1","How you doing?", "Aryan Bharadwaj"))
-        mList.add(Message(user?.uid,"I'm good buddy.", "Aryan Chauhan"))
-        mList.add(Message(user?.uid,"You say", "Aryan Chauhan"))
-        viewAdapter = ChatAdapter(this, mList)
+        viewAdapter = ChatAdapter(this)
 
         val recyclerView:RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
@@ -81,4 +75,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onStop() {
+        super.onStop()
+        viewAdapter.removeListener()
+    }
 }

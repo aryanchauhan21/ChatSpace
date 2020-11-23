@@ -28,11 +28,41 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.AdapterViewHol
     private ArrayList<Message> messageList;
     private DatabaseReference reference;
 
-    public ChatAdapter(Context context, ArrayList<Message> mList) {
+    public ChatAdapter(Context context) {
         this.context = context;
-        reference = FirebaseDatabase.getInstance().getReference();
-        messageList = mList;
+        reference = FirebaseDatabase.getInstance().getReference().child("chat");
+        messageList = new ArrayList<Message>();
+        reference.addChildEventListener(listener);
     }
+
+    private ChildEventListener listener = new ChildEventListener() {
+        @Override
+        public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            messageList.add(snapshot.getValue(Message.class));
+            notifyDataSetChanged();
+        }
+
+        @Override
+        public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+        }
+
+        @Override
+        public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+
+        }
+    };
+
 
     @NonNull
     @Override
@@ -54,7 +84,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.AdapterViewHol
         if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals(message.getUid())){
             holder.layout1.setVisibility(View.GONE);
             holder.layout2.setVisibility(View.VISIBLE);
+        } else {
+            holder.layout2.setVisibility(View.GONE);
+            holder.layout1.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void removeListener(){
+        reference.removeEventListener(listener);
     }
 
     @Override
